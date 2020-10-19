@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath grupa grupa.wsgi
