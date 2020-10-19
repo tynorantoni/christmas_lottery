@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>eStartup Bootstrap Template - Index</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{% static 'lottery/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'lottery/img/apple-touch-icon.png ' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'lottery/vendor/bootstrap/css/bootstrap.min.css ' %}" rel="stylesheet">
+    <link href="{% static 'lottery/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lottery/vendor/modal-video/css/modal-video.min.cs ' %}" rel="stylesheet">
+    <link href="{% static 'lottery/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lottery/vendor/aos/aos.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'lottery/css/style.css' %}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: eStartup - v2.1.0
+    * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                </div>
+
+
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    <button type="submit" class="btn btn-info">Log In</button>
+
+                                </form>
+
+
+                                <hr>
+                                <div class="text-center">
+                                    <a class="small" href="/password_reset">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="/register">Create an Account!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Vendor JS Files -->
+<script src="{% static 'lottery/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'lottery/vendor/modal-video/js/modal-video.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'lottery/vendor/hoverIntent/hoverIntent.js' %}"></script>
+<script src="{% static 'lottery/vendor/aos/aos.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'lottery/js/main.js' %}"></script>
+
+</body>
+
+</html>
