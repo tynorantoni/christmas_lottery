@@ -22,7 +22,7 @@ from lottery import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
-    path('', include('lottery.urls')),
+    path('renifer', include('lottery.urls')),
     path('', RedirectView.as_view(url='login')),
     path('register/', views.register, name='register')
 ]
