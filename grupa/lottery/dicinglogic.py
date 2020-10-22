@@ -1,18 +1,23 @@
 import random
 
+from lottery.models import LotteryModel
+
 
 class DicingLogic:
 
     def lets_roll(self):
+        santas_list = LotteryModel.objects.values_list('user_name').filter('has_been_diced' == False)
+
         logged_user = 'pawel'
         counter = 0
-        mail_list = ['pawel', 'kasia', 'magda', 'joanna', 'dorota']
 
-        while mail_list:
+        while santas_list:
             counter += 1
-            your_person = random.choice(mail_list)
-            if not your_person == logged_user:
-                mail_list.remove(your_person)
+            your_dice = random.choice(santas_list)
+            if your_dice is not logged_user:
+                db_model = LotteryModel.objects.get(user_name=your_dice)
+                db_model.has_been_diced = True
+                db_model.save()
                 print("I've turned {} times".format(counter))
-                print(mail_list)
-                return your_person
+                print(santas_list)
+                return your_dice
