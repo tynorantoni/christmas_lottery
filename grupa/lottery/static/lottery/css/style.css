@@ -114,7 +114,7 @@ background-position:center;background-size:cover
 }
 
 .bg-register-image{
-background:url("/static/lottery/img/Wham-Last-Christmas.jpg"/600x800);
+background:url("/static/lottery/img/Wham-Last-Christmas.jpg");
 background-position:center;background-size:cover
 }
 
