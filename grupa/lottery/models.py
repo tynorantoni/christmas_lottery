@@ -11,13 +11,3 @@ class LotteryModel(models.Model):
 
     def __str__(self):
         return self.user_name
-
-
-
-# user is logging in -> index -> get user_name(pk=user)
-# user is dicing -> list all users has_been_diced=0-> if not user -> who_hit -> target
-# target -> has_been_diced = 1
-# user sees who_hit on page
-#
-#
-#

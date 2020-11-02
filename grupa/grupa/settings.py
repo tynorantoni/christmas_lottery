@@ -140,4 +140,3 @@ EMAIL_HOST_USER = 'renifer@buziaczek.pl'
 EMAIL_HOST_PASSWORD = 'Dorislubikabanosy1'
 
 DEFAULT_FROM_EMAIL = 'renifer@buziaczek.pl'
-
