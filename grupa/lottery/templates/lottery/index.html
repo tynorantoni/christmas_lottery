@@ -56,14 +56,17 @@
                              height="300">
                     </div>
                     <div class="col-lg-4 col-md-3" id="lotteryBlock">
-                        <h4>e-renifer</h4>
+
                         {% if is_true %}
-                        <p> Przemiły e-renifer wylosował dla Ciebie {{is_true}}!</p>
+                        <h3> Przemiły e-renifer wylosował dla Ciebie </h3>
+                        <br>
+                        <center><h2>{{is_true}}!</h2></center>
                         {% else %}
-                        <p>Kliknij przycisk, e-renifer wylosuje komu 'zrobisz' piękny prezent</p>
+                        <h4>Kliknij przycisk, e-renifer wylosuje komu 'zrobisz' piękny prezent</h4>
+                        <br>
                         <form method="post">
                             {% csrf_token %}
-                            <input type="submit" class="btn btn-primary" value="Losuj" name="trig_dice">
+                            <input type="submit" class="btn btn-secondary" value="Losuj" name="trig_dice">
                         </form>
                         {% endif %}
                     </div>
