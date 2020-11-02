@@ -11,17 +11,16 @@ from lottery.models import LotteryModel
 @login_required()
 def index(request):
     user = User.objects.get(username=request.user)
-    print(user, " user name")
-
+    hey_santa = DicingLogic()
+    is_true = hey_santa.check_if_diced(user)
+    print(is_true)
     if (request.POST.get('trig_dice')):
         print('working!')
-        hey_santa = DicingLogic().lets_roll(user)
-        is_true = True
-        context = {'hey_santa': hey_santa,
-                   'is_true': is_true,
-                   'user_obj': user}
-    # if request.POST.get('trig_play'):
-    #     print('siemka')
+        hey_santa.lets_roll(user)
+        return redirect("/renifer")
+
+    context = {'is_true': is_true,
+               'user': user}
     return render(request, 'lottery/index.html', context)
 
 
