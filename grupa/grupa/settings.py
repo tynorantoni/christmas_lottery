@@ -129,14 +129,14 @@ django_heroku.settings(locals())
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp.poczta.onet.pl'
+EMAIL_HOST = 'smtp.mail.yahoo.com'
 
 EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'renifer@buziaczek.pl'
+EMAIL_HOST_USER = 'e_renifer@yahoo.com'
 
-EMAIL_HOST_PASSWORD = 'Dorislubikabanosy1'
+EMAIL_HOST_PASSWORD = 'clhekornaagsfyfr'
 
-DEFAULT_FROM_EMAIL = 'renifer@buziaczek.pl'
+DEFAULT_FROM_EMAIL = 'e_renifer@yahoo.com'
