@@ -18,11 +18,15 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 from lottery import views
+from lottery.views import CustomLoginView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
     path('renifer', include('lottery.urls')),
-    path('', RedirectView.as_view(url='login')),
-    path('register/', views.register, name='register')
+    # path('', RedirectView.as_view(url='login')),
+    path('', CustomLoginView.as_view(), name='login')
+
 ]
+handler404 = 'lottery.views.view_404'

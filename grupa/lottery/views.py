@@ -1,12 +1,15 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.contrib.auth.views import LoginView
+from django.http import HttpResponseNotFound
+from django.shortcuts import render, redirect
 
 # @login_required
 from lottery.dicinglogic import DicingLogic
+from lottery.forms import CustomAuthenticationForm
 from lottery.models import LotteryModel
 
-
+@login_required()
 def index(request):
     hey_santa = 'lov ya'  # DicingLogic().lets_roll()
 
@@ -22,6 +25,9 @@ def index(request):
         print('siemka')
     return render(request, 'lottery/index.html', context)
 
+def view_404(request, exception=None):
+    return redirect("/")
 
-def register(request):
-    pass
+class CustomLoginView(LoginView):
+    authentication_form = CustomAuthenticationForm
+

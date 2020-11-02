@@ -9,3 +9,7 @@ urlpatterns= [
     path('',views.index, name='index'),
 
 ]
+# TODO
+
+# dicing logic model related
+# user content
