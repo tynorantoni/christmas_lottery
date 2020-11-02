@@ -126,3 +126,18 @@ LOGIN_REDIRECT_URL = '/renifer'
 LOGOUT_REDIRECT_URL = '/'
 
 django_heroku.settings(locals())
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.poczta.onet.pl'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+EMAIL_HOST_USER = 'renifer@buziaczek.pl'
+
+EMAIL_HOST_PASSWORD = 'Dorislubikabanosy1'
+
+DEFAULT_FROM_EMAIL = 'renifer@buziaczek.pl'
+
