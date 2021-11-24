@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'grupa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd7qt021mjaj1du',
-        'USER': 'ovrrjdbwjyhlbb',
-        'PASSWORD': '[]',
-        'HOST': 'ec2-54-216-202-161.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd3k1ckf7o6ndra',
+        'USER': 'gnxozwvtozhcat',
+        'PASSWORD': '92e95449fcea3e7519e17b461b68a694c4ae27e79c4c7bfe6d9ef3aaec3e4731',
+        'HOST': 'ec2-52-208-185-143.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
 
     }
